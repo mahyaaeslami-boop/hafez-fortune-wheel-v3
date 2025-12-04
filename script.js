@@ -297,18 +297,26 @@ class WheelApp {
     }
 
     showResult(segmentIndex) {
-        // Get a random poem
-        const randomPoem = hafezPoems[Math.floor(Math.random() * hafezPoems.length)];
+        // Use segment index to select a poem (map 12 segments to 20 poems)
+        const poemIndex = Math.floor((segmentIndex / wheelConfig.segments) * hafezPoems.length);
+        const selectedPoem = hafezPoems[poemIndex];
         
-        // Display the poem
-        this.poemText.innerHTML = `
-            <div style="margin-bottom: 15px; font-size: 1.2rem;">
-                ${randomPoem.text}
-            </div>
-            <div style="color: #FFA500; font-size: 0.95rem; font-style: italic;">
-                تعبیر: ${randomPoem.interpretation}
-            </div>
-        `;
+        // Create elements safely without innerHTML to prevent XSS
+        const poemTextDiv = document.createElement('div');
+        poemTextDiv.style.marginBottom = '15px';
+        poemTextDiv.style.fontSize = '1.2rem';
+        poemTextDiv.textContent = selectedPoem.text;
+        
+        const interpretationDiv = document.createElement('div');
+        interpretationDiv.style.color = '#FFA500';
+        interpretationDiv.style.fontSize = '0.95rem';
+        interpretationDiv.style.fontStyle = 'italic';
+        interpretationDiv.textContent = `تعبیر: ${selectedPoem.interpretation}`;
+        
+        // Clear and append
+        this.poemText.innerHTML = '';
+        this.poemText.appendChild(poemTextDiv);
+        this.poemText.appendChild(interpretationDiv);
         
         // Show result section with animation
         setTimeout(() => {

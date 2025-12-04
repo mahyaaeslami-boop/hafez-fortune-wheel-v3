@@ -322,16 +322,19 @@ body::before {
     }
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Loading state */
+.spinning {
+    animation: pulse 0.5s infinite alternate;
 }
 
-/* Responsive Design - Mobile First */
+@keyframes pulse {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @media (max-width: 480px) {
     .container {
         padding: 15px;
