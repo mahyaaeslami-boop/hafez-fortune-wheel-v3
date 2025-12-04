@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فال حافظ ویژه شب یلدا - با چرخ فال حافظ، شب یلدای خود را به یادماندنی کنید">
+    <meta name="keywords" content="یلدا, شب یلدا, فال حافظ, حافظ, شعر حافظ">
+    <meta name="theme-color" content="#8B0000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="فال یلدا">
+    <link rel="manifest" href="manifest.json">
+    <title>فال حافظ - شب یلدا مبارک</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="main-title">🌙 شب یلدا مبارک 🌙</h1>
+            <p class="subtitle">فال حافظ</p>
+        </header>
+
+        <!-- Yalda Decorations -->
+        <div class="decorations">
+            <div class="decoration-item">🍉</div>
+            <div class="decoration-item">🍎</div>
+            <div class="decoration-item">⭐</div>
+        </div>
+
+        <!-- Fortune Wheel Container -->
+        <div class="wheel-container">
+            <div class="wheel-wrapper">
+                <canvas id="wheelCanvas" width="300" height="300"></canvas>
+                <div class="wheel-pointer">▼</div>
+            </div>
+        </div>
+
+        <!-- Spin Button -->
+        <button id="spinButton" class="spin-button">
+            <span class="button-text">بچرخان و فال بگیر</span>
+            <span class="button-icon">🎰</span>
+        </button>
+
+        <!-- Result Section -->
+        <div id="resultSection" class="result-section hidden">
+            <div class="poem-card">
+                <h2 class="poem-title">فال شما:</h2>
+                <div id="poemText" class="poem-text"></div>
+                <button id="newFortuneButton" class="new-fortune-button">
+                    فال دیگر
+                </button>
+            </div>
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-section">
+            <h3 class="info-title">درباره شب یلدا</h3>
+            <p class="info-text">
+                شب یلدا طولانی‌ترین شب سال است که ایرانیان از دیرباز آن را با دور هم جمع شدن، 
+                خوردن هندوانه و انار و فال حافظ گرفتن جشن می‌گیرند.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>ساخته شده با ❤️ برای شب یلدا</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
