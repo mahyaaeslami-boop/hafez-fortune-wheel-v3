@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celebrate Yalda Night - Experience the 7,000-year Persian winter solstice tradition with Hafez poetry fortune wheel and cultural knowledge quiz">
+    <meta name="keywords" content="Yalda Night, Shab-e Yalda, Persian Culture, Hafez Poetry, Winter Solstice">
+    <title>Yalda Night Celebration - شب یلدا مبارک</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Crimson+Text:wght@400;600&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Decorative Persian Pattern Overlay -->
+    <div class="pattern-overlay"></div>
+    
+    <!-- SVG Definitions for Reusable Patterns -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <!-- Persian Star Pattern -->
+            <pattern id="persianStar" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                <polygon points="50,15 61,35 82,35 65,48 71,67 50,54 29,67 35,48 18,35 39,35" 
+                         fill="rgba(212, 175, 55, 0.1)" stroke="rgba(212, 175, 55, 0.3)" stroke-width="1"/>
+            </pattern>
+            
+            <!-- Geometric Diamond Pattern -->
+            <pattern id="persianDiamond" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                <path d="M40,0 L80,40 L40,80 L0,40 Z" fill="none" stroke="rgba(196, 30, 58, 0.15)" stroke-width="1.5"/>
+                <circle cx="40" cy="40" r="5" fill="rgba(212, 175, 55, 0.2)"/>
+            </pattern>
+            
+            <!-- Arabesque Flower -->
+            <pattern id="arabesque" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+                <circle cx="60" cy="60" r="25" fill="none" stroke="rgba(212, 175, 55, 0.1)" stroke-width="2"/>
+                <circle cx="60" cy="35" r="8" fill="rgba(196, 30, 58, 0.1)"/>
+                <circle cx="85" cy="60" r="8" fill="rgba(196, 30, 58, 0.1)"/>
+                <circle cx="60" cy="85" r="8" fill="rgba(196, 30, 58, 0.1)"/>
+                <circle cx="35" cy="60" r="8" fill="rgba(196, 30, 58, 0.1)"/>
+            </pattern>
+        </defs>
+    </svg>
+    
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">
+                    <span class="title-en">Yalda Night</span>
+                    <span class="title-fa">شب یلدا</span>
+                </h1>
+                <p class="subtitle">Celebrating the Longest Night of the Year</p>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn" data-section="about">About Yalda</button>
+                <button class="nav-btn" data-section="wheel">Fortune Wheel</button>
+                <button class="nav-btn" data-section="quiz">Knowledge Quiz</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background-image"></div>
+        <div class="hero-ornament-top">
+            <svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q150,20 300,50 T600,50 T900,50 T1200,50" stroke="rgba(212, 175, 55, 0.4)" stroke-width="2" fill="none"/>
+                <path d="M0,60 Q150,80 300,60 T600,60 T900,60 T1200,60" stroke="rgba(196, 30, 58, 0.3)" stroke-width="1.5" fill="none"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Welcome to the Night of Light</h2>
+                    <p class="hero-description">
+                        Journey through 7,000 years of Persian tradition as we celebrate 
+                        the triumph of light over darkness on the winter solstice.
+                    </p>
+                    <div class="hero-symbols">
+                        <span class="symbol">🍎 Pomegranate</span>
+                        <span class="symbol">🍉 Watermelon</span>
+                        <span class="symbol">📖 Hafez Poetry</span>
+                        <span class="symbol">🕯️ Candles</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-ornament-bottom">
+            <svg viewBox="0 0 1200 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,50 Q150,70 300,50 T600,50 T900,50 T1200,50" stroke="rgba(212, 175, 55, 0.4)" stroke-width="2" fill="none"/>
+                <circle cx="150" cy="50" r="4" fill="rgba(212, 175, 55, 0.6)"/>
+                <circle cx="450" cy="50" r="4" fill="rgba(212, 175, 55, 0.6)"/>
+                <circle cx="750" cy="50" r="4" fill="rgba(212, 175, 55, 0.6)"/>
+                <circle cx="1050" cy="50" r="4" fill="rgba(212, 175, 55, 0.6)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section about-section">
+        <div class="section-pattern-bg"></div>
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-ornament" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,20 Q30,10 50,20 T90,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <path d="M110,20 Q130,10 150,20 T190,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <circle cx="100" cy="20" r="8" fill="#C41E3A" stroke="#D4AF37" stroke-width="2"/>
+                    <circle cx="100" cy="20" r="3" fill="#D4AF37"/>
+                </svg>
+                <h2 class="section-title">What is Yalda Night?</h2>
+                <div class="title-decoration"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🌙</div>
+                    <h3>Ancient Tradition</h3>
+                    <p>
+                        Yalda Night (شب یلدا - Shab-e Yalda) is one of the most ancient Persian 
+                        celebrations, marking the winter solstice and the longest night of the year. 
+                        With origins dating back over 7,000 years, this sacred night celebrates 
+                        the victory of light over darkness.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🍎</div>
+                    <h3>Sacred Symbols</h3>
+                    <p>
+                        Families gather to share pomegranates (symbolizing life and fertility), 
+                        watermelons (representing warmth in winter), nuts, and dried fruits. 
+                        The vibrant red of pomegranates echoes the crimson hues of dawn and rebirth.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">📖</div>
+                    <h3>Hafez Poetry Tradition</h3>
+                    <p>
+                        A cherished tradition is "Fāl-e Hafez" - seeking guidance through the 
+                        mystical poetry of Hafez Shirazi (14th century). Families randomly open 
+                        his Divan (collection of poems) to receive divine messages and insights 
+                        for the coming year.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🕯️</div>
+                    <h3>Celebration of Light</h3>
+                    <p>
+                        From this longest night forward, days grow longer and light triumphs. 
+                        Candles illuminate homes as families share stories, recite poetry, 
+                        and celebrate together until dawn, welcoming the renewal of the sun.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🎭</div>
+                    <h3>Cultural Significance</h3>
+                    <p>
+                        Yalda represents the Persian connection to nature's cycles and the 
+                        Zoroastrian roots of Iranian culture. It embodies values of family unity, 
+                        hope, wisdom, and the eternal battle between light and darkness.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Modern Celebration</h3>
+                    <p>
+                        Today, millions worldwide celebrate Yalda Night, preserving this 
+                        beautiful tradition. Whether in Iran or diaspora communities, families 
+                        gather to honor their heritage and share the warmth of togetherness.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fortune Wheel Section -->
+    <section id="wheel" class="content-section wheel-section">
+        <div class="wheel-background-image"></div>
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-ornament" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,20 Q30,10 50,20 T90,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <path d="M110,20 Q130,10 150,20 T190,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <circle cx="100" cy="20" r="8" fill="#C41E3A" stroke="#D4AF37" stroke-width="2"/>
+                    <circle cx="100" cy="20" r="3" fill="#D4AF37"/>
+                </svg>
+                <h2 class="section-title">Hafez Fortune Wheel</h2>
+                <div class="title-decoration"></div>
+                <p class="section-description">
+                    Spin the wheel and receive a divine message from Hafez's 615 mystical poems
+                </p>
+            </div>
+
+            <div class="wheel-container">
+                <div class="wheel-wrapper">
+                    <div class="wheel-pointer"></div>
+                    <canvas id="fortuneWheel" width="600" height="600"></canvas>
+                    <button id="spinButton" class="spin-button">
+                        <span class="button-text">Spin the Wheel</span>
+                        <span class="button-subtext">دریافت فال حافظ</span>
+                    </button>
+                </div>
+                
+                <div id="fortuneResult" class="fortune-result hidden">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Your Message from Hafez</h3>
+                            <span class="result-close">&times;</span>
+                        </div>
+                        <div class="result-content">
+                            <div class="poem-farsi" id="poemFarsi"></div>
+                            <div class="poem-translation" id="poemTranslation"></div>
+                            <div class="poem-interpretation" id="poemInterpretation"></div>
+                        </div>
+                        <button class="spin-again-btn" id="spinAgainBtn">Spin Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="content-section quiz-section">
+        <div class="quiz-background-image"></div>
+        <div class="container">
+            <div class="section-header">
+                <svg class="section-ornament" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10,20 Q30,10 50,20 T90,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <path d="M110,20 Q130,10 150,20 T190,20" stroke="#D4AF37" stroke-width="2" fill="none"/>
+                    <circle cx="100" cy="20" r="8" fill="#C41E3A" stroke="#D4AF37" stroke-width="2"/>
+                    <circle cx="100" cy="20" r="3" fill="#D4AF37"/>
+                </svg>
+                <h2 class="section-title">Yalda Knowledge Challenge</h2>
+                <div class="title-decoration"></div>
+                <p class="section-description">
+                    Test your knowledge about Yalda Night traditions and Persian culture
+                </p>
+            </div>
+
+            <div class="quiz-container">
+                <!-- Quiz Start Screen -->
+                <div id="quizStart" class="quiz-screen">
+                    <div class="quiz-intro">
+                        <div class="quiz-icon">🎓</div>
+                        <h3>Ready to Test Your Knowledge?</h3>
+                        <ul class="quiz-rules">
+                            <li>10 questions about Yalda Night and Persian culture</li>
+                            <li>2.5 minutes (150 seconds) to complete</li>
+                            <li>Instant feedback with explanations</li>
+                            <li>Score 8+ to earn your certificate!</li>
+                        </ul>
+                        <button id="startQuizBtn" class="quiz-button">Start Challenge</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Game Screen -->
+                <div id="quizGame" class="quiz-screen hidden">
+                    <div class="quiz-header">
+                        <div class="quiz-progress">
+                            Question <span id="currentQuestion">1</span> of 10
+                        </div>
+                        <div class="quiz-timer">
+                            <span class="timer-icon">⏱️</span>
+                            <span id="timerDisplay">2:30</span>
+                        </div>
+                        <div class="quiz-score">
+                            Score: <span id="currentScore">0</span>
+                        </div>
+                    </div>
+
+                    <div class="question-container">
+                        <h3 id="questionText" class="question-text"></h3>
+                        <div id="answersContainer" class="answers-container"></div>
+                    </div>
+
+                    <div id="feedbackContainer" class="feedback-container hidden">
+                        <div class="feedback-content">
+                            <p class="feedback-message"></p>
+                            <p class="feedback-explanation"></p>
+                            <button id="nextQuestionBtn" class="quiz-button">Next Question</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen -->
+                <div id="quizResults" class="quiz-screen hidden">
+                    <div class="results-container">
+                        <div id="resultsContent"></div>
+                        <button id="retakeQuizBtn" class="quiz-button">Take Quiz Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About This Experience</h4>
+                    <p>
+                        Created to share the beauty and wisdom of Yalda Night with the world. 
+                        May this celebration bring light, joy, and connection to all.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Yalda Blessings</h4>
+                    <p class="persian-text">شب یلدا مبارک</p>
+                    <p>Wishing you a blessed Yalda Night filled with love, light, and poetry.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Yalda Night Celebration. Honoring 7,000 years of Persian heritage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
