@@ -752,6 +752,20 @@ function initQuiz() {
     if (downloadLeaderboardBtn) {
         downloadLeaderboardBtn.addEventListener('click', downloadLeaderboardData);
     }
+    
+    // Toggle Admin Panel Button
+    const toggleAdminBtn = document.getElementById('toggleAdminPanel');
+    if (toggleAdminBtn) {
+        toggleAdminBtn.addEventListener('click', function() {
+            const leaderboardSection = document.getElementById('leaderboardSection');
+            if (leaderboardSection.style.display === 'none' || !leaderboardSection.style.display) {
+                leaderboardSection.style.display = 'block';
+                leaderboardSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                leaderboardSection.style.display = 'none';
+            }
+        });
+    }
 }
 
 // Admin password check
